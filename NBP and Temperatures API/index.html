@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>dd</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div id="wykres-1"></div>
-    <div id="wykres-2"></div>
-    <div id="wykres-3"></div>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>dd</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script defer src="a.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="chart" id="wykres-1"><canvas id="canvas-chart-1" height="200" width="200"></canvas></div>
+        <div class="chart" id="wykres-2"><canvas id="canvas-chart-2" height="200" width="200"></canvas></div>
+        <div class="chart" id="wykres-3"></div>
+    </body>
+</html>
