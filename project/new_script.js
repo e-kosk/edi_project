@@ -11,7 +11,7 @@ $(document).ready(function () {
             dates.push(object.effectiveDate);
         });
 
-        drawChart('GBP rates','line', 'canvas-chart-1', dates, mids, 'rgba(255, 99, 132, 0.2)')
+        drawChart1('GBP rates','line', 'canvas-chart-1', dates, mids, 'brown', 'green', true)
     });
 
     fetch("http://api.nbp.pl/api/exchangerates/rates/a/eur/2020-01-01/2020-01-22/?format=json").then(response => response.json()).then(response => {
@@ -25,11 +25,11 @@ $(document).ready(function () {
             dates.push(object.effectiveDate);
         });
 
-        drawChart('EUR rates', 'bar','canvas-chart-2', dates, mids, 'rgba(116,255,114,0.2)')
+        drawChart2('EUR rates', 'bar','canvas-chart-2', dates, mids, 'blue', 'black', false, )
     });
+    
 
-
-    let drawChart = function(label, type, canvas, labels, values, bgcolor) {
+    let drawChart1 = function(label, type, canvas, labels, values) {
 
         let CHART = document.getElementById(canvas).getContext('2d');
 
@@ -41,18 +41,41 @@ $(document).ready(function () {
                     label: label,
                     data: values,
                     fill: false,
-                    backgroundColor: [bgcolor],
-                    borderColor: ['rgba(255, 99, 132, 1)'],
+                    backgroundColor: 'black',
+                    borderColor: 'red',
                     borderWidth: 1
-                },{
-                    label: 'Moj nowy label',
-                    data: [5.4, 4.1, 4, 5, 6, 5, 4, 5, 6, 5, 6],
-                    fill: false,
-                    backgroundColor: [bgcolor],
-                    borderColor: ['rgb(139,152,255)'],
-                    borderWidth: 1
+            
                 }]
             }
         });
+        
+
     }
+    let drawChart2 = function(label, type, canvas, labels, values) {
+
+        let CHART = document.getElementById(canvas).getContext('2d');
+
+        let myChart = new Chart(CHART, {
+            type: type,
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: label,
+                    data: values,
+                    fill: false,
+                    backgroundColor: 'blue',
+                    borderColor: 'black',
+                    borderWidth: 1
+            
+                }]
+            }
+        });
+    } 
 });
+
+
+
+
+
+
+
