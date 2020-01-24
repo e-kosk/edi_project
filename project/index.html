@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Charts with chartJS</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-        <script defer src="new_script.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="chart" id="wykres-1"><canvas id="canvas-chart-1" height="200" width="200"></canvas></div>
-        <div class="chart" id="wykres-2"><canvas id="canvas-chart-2" height="200" width="200"></canvas></div>
-        <div class="chart" id="wykres-3"><canvas id="canvas-chart-3" height="200" width="200"></canvas></div>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charts with chartJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script defer src="new_script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div id="title"><h1 class="display-2 text-center">Project #01</h1></div>
+<div id="charts">
+    <div class="chart" id="wykres-1">
+        <canvas class="chart-canvas" id="canvas-chart-1" height="200" width="500"></canvas>
+    </div>
+    <div class="chart" id="wykres-2">
+        <canvas class="chart-canvas" id="canvas-chart-2" height="200" width="500"></canvas>
+    </div>
+    <div class="chart" id="wykres-3">
+        <canvas class="chart-canvas" id="canvas-chart-3" height="200" width="500"></canvas>
+    </div>
+</div>
+<div id="joke" class="text-center">
+    <span class="display-block" id="joke-question">question</span>
+    <span class="display-block" id="joke-answer">answer</span>
+    <span class="display-block blockquote-footer">GitHub Jokes</span>
+    <span class="display-block" id="hint">To get new joke, hit <kbd>j</kbd> on your keyboard.</span>
+</div>
+<div id="footer">
+    <div id="footer-info">
+        Created by
+        <ul>
+            <li><a href="">Kuba Kustra</a></li>
+            <li><a href="">Kacper Kobyra</a></li>
+            <li><a href="">Eryk Kosk</a></li>
+        </ul>
+    </div>
+    <div id="footer-weather">
+        tu jakas pogoda albo cos
+    </div>
+</div>
+</body>
 </html>
