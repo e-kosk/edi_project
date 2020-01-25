@@ -19,36 +19,48 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<div id="title"><h1 class="display-2 text-center">Project #01</h1></div>
-<div id="charts">
-    <div class="chart" id="wykres-1">
-        <canvas class="chart-canvas" id="canvas-chart-1" height="200" width="500"></canvas>
+
+    <div id="title"><h1 class="display-2 text-center">Project #01</h1></div>
+
+    <div id="charts">
+        <div class="chart" id="wykres-1">
+            <canvas class="chart-canvas" id="canvas-chart-1" height="200" width="500"></canvas>
+        </div>
+        <div class="chart" id="wykres-2">
+            <canvas class="chart-canvas" id="canvas-chart-2" height="200" width="500"></canvas>
+        </div>
+        <div class="chart" id="wykres-3">
+            <canvas class="chart-canvas" id="canvas-chart-3" height="200" width="500"></canvas>
+        </div>
     </div>
-    <div class="chart" id="wykres-2">
-        <canvas class="chart-canvas" id="canvas-chart-2" height="200" width="500"></canvas>
+
+    <div id="joke" class="text-center">
+        <span class="display-block" id="joke-question">question</span>
+        <span class="display-block" id="joke-answer">answer</span>
+        <span class="display-block blockquote-footer">GitHub Jokes</span>
+        <span class="display-block" id="hint">To get new joke, hit <kbd>j</kbd> on your keyboard.</span>
     </div>
-    <div class="chart" id="wykres-3">
-        <canvas class="chart-canvas" id="canvas-chart-3" height="200" width="500"></canvas>
+
+    <div class="row" id="footer">
+        <div id="footer-info" class="col">
+            Created by
+            <ul>
+                <li><a href="https://github.com/kuba-kustra">Kuba Kustra</a></li>
+                <li><a href="https://github.com/kacper26">Kacper Kobyra</a></li>
+                <li><a href="https://github.com/e-kosk">Eryk Kosk</a></li>
+            </ul>
+        </div>
+        <div id="footer-weather" class="col">
+            <div id="weather">
+                <span>Current weather in Crakow:</span><br>
+                <span id="temp">loading...</span>
+            </div>
+        </div>
     </div>
-</div>
-<div id="joke" class="text-center">
-    <span class="display-block" id="joke-question">question</span>
-    <span class="display-block" id="joke-answer">answer</span>
-    <span class="display-block blockquote-footer">GitHub Jokes</span>
-    <span class="display-block" id="hint">To get new joke, hit <kbd>j</kbd> on your keyboard.</span>
-</div>
-<div id="footer">
-    <div id="footer-info">
-        Created by
-        <ul>
-            <li><a href="">Kuba Kustra</a></li>
-            <li><a href="">Kacper Kobyra</a></li>
-            <li><a href="">Eryk Kosk</a></li>
-        </ul>
+
+    <div id="learn-more">
+        <span>Learm more about this project at <a href="https://github.com/e-kosk/edi_project/projects/1">GitHub.com</a></span>
     </div>
-    <div id="footer-weather">
-        tu jakas pogoda albo cos
-    </div>
-</div>
+
 </body>
 </html>
