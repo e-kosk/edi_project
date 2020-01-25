@@ -112,11 +112,13 @@ let joke_a = res_joke.punchline;
 let res_weather = getData(url_weather);
 // END OF GETTING WEATHER DATA
 
-
+let loading = function(){
+	$('#joke-question').text('loading question...');
+	$('#joke-answer').text('generating answer...');
+}
 
 $(document).ready(function () {
 
-    console.log(res_weather.main.temp);
     $('#temp').text(res_weather.main.temp + '\u00B0' + 'C');
 
     // DRAWING NBP CHARTS
@@ -135,14 +137,14 @@ $(document).ready(function () {
            var ev = e || window.event;
            var key = ev.keyCode || ev.which;
 
-           $('#joke-question').text('loading question...');
-           $('#joke-answer').text('generating answer...');
-
            if (key == 106) {
-               let res_joke = getData(url_joke);
-               let joke_q = res_joke.setup;
-               let joke_a = res_joke.punchline;
-               writeJoke(joke_q, joke_a, $('#joke-question'), $('#joke-answer'));
+	        loading();
+	        setTimeout(() => {
+                   let res_joke = getData(url_joke);
+               	   let joke_q = res_joke.setup;
+               	   let joke_a = res_joke.punchline;
+               	   writeJoke(joke_q, joke_a, $('#joke-question'), $('#joke-answer'));
+	       }, 1);
            }
        });
     });
