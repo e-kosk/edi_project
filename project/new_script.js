@@ -1,7 +1,7 @@
 // variables and urls
 let req = new XMLHttpRequest();
-let url_nbp_1 = "http://api.nbp.pl/api/exchangerates/rates/a/gbp/2020-01-01/2020-01-22/?format=json";
-let url_nbp_2 = "http://api.nbp.pl/api/exchangerates/rates/a/eur/2020-01-01/2020-01-22/?format=json";
+let url_nbp_1 = "http://api.nbp.pl/api/exchangerates/rates/a/usd/2020-01-01/2020-01-22/?format=json";
+let url_nbp_2 = "http://api.nbp.pl/api/exchangerates/rates/a/chf/2020-01-01/2020-01-22/?format=json";
 let url_joke = 'https://official-joke-api.appspot.com/random_joke';
 let url_weather = 'https://api.openweathermap.org/data/2.5/weather?q=Krakow,pl&units=metric&appid=bbc670541580546559ac91314174503c';
 
@@ -21,14 +21,6 @@ let writeJoke = function (q, a, question_div, answer_div) {
     question_div.text(q);
     answer_div.text(a);
 };
-
-
-
-// let writeJoke = function (q, a question_div, answer_div) {
-//     let res_joke = getData(url_joke);
-//     question_div.text(res_joke.setup);
-//     answer_div.text(res_joke.punchline);
-// };
 
 let drawChart = function(type, canvas, labels, datasets) {
 
@@ -80,7 +72,7 @@ let labels_1 = [];
 let labels_2 = [];
 
 let dataset_1 = {
-    label: 'GBP rates',
+    label: 'USD rates',
     data: [],
     fill: false,
     backgroundColor: '#ffd866',
@@ -89,7 +81,7 @@ let dataset_1 = {
 };
 
 let dataset_2 = {
-    label: 'EUR rates',
+    label: 'CHF rates',
     data: [],
     fill: false,
     backgroundColor: '#146ccc',
